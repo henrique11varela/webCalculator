@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webCalculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    
+        <div id="screen">
+            <p class="active" id="screen-text">
+                _
+            </p>
+        </div>
+
+        <div class="grid">
+
+            <button class="other" id="me" onclick="buttonInput(this)">me</button>
+            <button class="delete" id="clean" onclick="buttonInput(this)">C</button>
+            <button class="delete" id="del" onclick="buttonInput(this)">Del</button>
+            <button class="modifier" onclick="buttonInput(this)" value="/">/</button>
+
+            <button class="argument" onclick="buttonInput(this)" value="7">7</button>
+            <button class="argument" onclick="buttonInput(this)" value="8">8</button>
+            <button class="argument" onclick="buttonInput(this)" value="9">9</button>
+            <button class="modifier" id="multiplication" onclick="buttonInput(this)" value="*">*</button>
+
+            <button class="argument" onclick="buttonInput(this)" value="4">4</button>
+            <button class="argument" onclick="buttonInput(this)" value="5">5</button>
+            <button class="argument" onclick="buttonInput(this)" value="6">6</button>
+            <button class="modifier" onclick="buttonInput(this)" value="-">-</button>
+
+            <button class="argument" onclick="buttonInput(this)" value="1">1</button>
+            <button class="argument" onclick="buttonInput(this)" value="2">2</button>
+            <button class="argument" onclick="buttonInput(this)" value="3">3</button>
+            <button class="modifier" onclick="buttonInput(this)" value="+">+</button>
+
+            <button class="argument" onclick="buttonInput(this)" value="0">0</button>
+            <button class="argument" onclick="buttonInput(this)" value=".">.</button>
+            <button class="argument" id="negative" onclick="buttonInput(this)" value="-">(-)</button>
+            <button id="equals" onclick="buttonInput(this)">=</button>
+
+        </div>
+    
+
+
+
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

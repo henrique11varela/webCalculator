@@ -1,0 +1,67 @@
+
+/* general */
+
+* {
+    font-size: 7vw;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    /*border: transparent 0px solid;*/
+}
+
+
+body {
+    background-color: rgb(90, 90, 90);
+    padding: 20px;
+}
+
+#screen {
+    
+    background-color: rgb(240, 240, 240);
+    height: calc(100vh - 125vw - 15px);
+    display: grid;
+    place-content: center;
+    border-radius: 30px;
+    border: black 2px solid
+}
+
+#screen p {
+    font-size: 10vh;
+}
+
+p.active {
+    animation-name: blink;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.grid {
+    position: absolute;
+    bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    width: calc(100vw - 40px);
+    height: calc(125vw - 40px);
+}
+
+button {
+    border-radius: 50%;
+    margin: 5px;
+    border: black 2px solid
+}
+
+.argument {
+    font-size: 10vw;
+    font-weight: bold;
+    background-color: lightblue;
+    color: #fff;
+}
+
+@keyframes blink {
+    0% { color: black;}
+    49% {color: black;}
+    50% { color: rgb(240, 240, 240);}
+    100% { color: rgb(240, 240, 240);}
+}
+
