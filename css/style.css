@@ -37,12 +37,13 @@ p.active {
 
 .grid {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(5,1fr);
     width: calc(100vw - 40px);
     height: calc(125vw - 40px);
+    
 }
 
 button {
