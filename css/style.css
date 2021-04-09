@@ -18,7 +18,8 @@ body {
 #screen {
     
     background-color: rgb(240, 240, 240);
-    height: calc(100vh - 125vw - 15px);
+    height: calc(100vh - 125vw - 45px);
+    top: 0;
     display: grid;
     place-content: center;
     border-radius: 30px;
