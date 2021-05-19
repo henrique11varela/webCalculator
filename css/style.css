@@ -1,76 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-/* general */
+:root {
+    --color-light: #f1f2da;
+    --color-dark: #00303b;
+    --color-1: #ff7777;
+    --color-2: #ffce96;
+}
 
 * {
-    font-size: 6vh;
-    font-weight: bold;
-    padding: 0;
     margin: 0;
-    /*border: transparent 0px solid;*/
+    padding: 0;
+    font-size: 8vh;
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
-
 
 body {
-    background-color: rgb(90, 90, 90);
-    
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
 
-.container {
-    width: 100%;
-    max-width: calc(100vh * 0.5625);
-    height: 93vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px 0;
-    position: relative;
-
+/* body */
+.calculator {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#screen {
-    background-color: rgb(240, 240, 240);
+/* display */
+.display {
+    height: 100%;
+    padding: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 10vh;
+    background-color: var(--color-dark);
+}
+
+/* keys */
+.keys {
     display: grid;
-    height: calc(36.75vh);
-    place-content: center;
-    border: black 2px solid;
-    border-radius: 5vh;
-    margin: 10px;
-}
-
-p.active {
-    animation-name: blink;
-    animation-duration: 1000ms;
-    animation-iteration-count: infinite;
-}
-
-.grid {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: inherit;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(5,1fr);
-    margin: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 button {
-    border-radius: 5vh;
-    border: black 2px solid;
-    height: 10vh;
-    max-height: calc((100vh * 0.5625)/4);
+    padding: 7px;
+    background-color: var(--color-2);
+    border: var(--color-dark) 1.5px solid;
 }
 
-.argument {
-    background-color: lightblue;
-    color: #fff;
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4) {
+    background-color: var(--color-light);
+}
+
+button:last-child {
+    grid-row: 3 / span 3;
+    grid-column: 4;
+    background-color: var(--color-1);
+    color: var(--color-2);
 }
 
 
 
-@keyframes blink {
-    0% { color: black;}
-    49% {color: black;}
-    50% { color: rgb(240, 240, 240);}
-    100% { color: rgb(240, 240, 240);}
+@media (min-width: 650px) {
+    
+    body {
+        overflow: hidden;
+    }
+    
+    .calculator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 95vh;
+        width: 50vh;
+        border-radius: 5vh;
+        border: var(--color-dark) 2px solid;
+        box-shadow: 0 0 10px var(--color-2);
+        overflow: hidden;
+    }
+    
+
 }
